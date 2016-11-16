@@ -9,7 +9,7 @@ export default class MyComponent extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: 'Welcome!'
+      title: 'Welcome other!'
     }
   }
 
@@ -17,7 +17,8 @@ export default class MyComponent extends React.Component {
     return (
       <div>
         <Header title={this.state.title} onTitleChange={::this.handleTitleChange}/>
-        <Link to="other">Go to Other</Link>
+        <Link to="/">Back</Link>
+        <button onClick={::this.onClick}>Back button</button>
         <Footer/>
       </div>
     )
@@ -27,6 +28,11 @@ export default class MyComponent extends React.Component {
     console.log(title)
 
     this.setState({ title });
+  }
+
+  onClick() {
+    console.log(this.props)
+    this.props.router.push('/')
   }
 
 }
