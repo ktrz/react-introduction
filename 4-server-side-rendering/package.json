@@ -1,0 +1,25 @@
+{
+  "name": "4-server-side-rendering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-react": "^6.16.0",
+    "babel-loader": "^6.2.7",
+    "react": "^15.3.2",
+    "babel-register": "^6.18.0",
+    "webpack": "^1.13.3",
+    "express": "^4.14.0",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && node server.js",
+    "withJS": "webpack && node serverWithJs.js",
+    "withJS2": "webpack && node serverWithJs2.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
